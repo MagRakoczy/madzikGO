@@ -16,23 +16,37 @@ func main() {
 
 	fmt.Print("operator: +,-,*,/")
 	fmt.Scanln(&operator)
-	switch operator {
-	case "+":
+
+	for operator == "+" {
 		fmt.Printf("%f %s %f = %f", lb1, operator, lb2, lb1+lb2)
-
-	case "-":
-		fmt.Printf("%f %s %f = %f", lb1, operator, lb2, lb1-lb2)
-
-	case "*":
-		fmt.Printf("%f %s %f = %f", lb1, operator, lb2, lb1*lb2)
-
-	case "/":
-		if lb2 == 0 {
-			fmt.Println("You cannot divide by 0")
-		} else {
-			fmt.Printf("%f %s %f = %f", lb1, operator, lb2, lb1/lb2)
-		}
-	default:
-		fmt.Println("There is not operator")
+		break
 	}
+	for operator == "-" {
+		fmt.Printf("%f %s %f = %f", lb1, operator, lb2, lb1-lb2)
+	}
+	for operator == "*" {
+		fmt.Printf("%f %s %f = %f", lb1, operator, lb2, lb1*lb2)
+	}
+	for operator == "/" {
+		fmt.Printf("%f %s %f = %f", lb1, operator, lb2, lb1/lb2)
+	}
+	// switch operator {
+	// case "+":
+	// 	fmt.Printf("%f %s %f = %f", lb1, operator, lb2, lb1+lb2)
+
+	// case "-":
+	// 	fmt.Printf("%f %s %f = %f", lb1, operator, lb2, lb1-lb2)
+
+	// case "*":
+	// 	fmt.Printf("%f %s %f = %f", lb1, operator, lb2, lb1*lb2)
+
+	// case "/":
+	// 	if lb2 == 0 {
+	// 		fmt.Println("You cannot divide by 0")
+	// 	} else {
+	// 		fmt.Printf("%f %s %f = %f", lb1, operator, lb2, lb1/lb2)
+	// 	}
+	// default:
+	// 	fmt.Println("There is not operator")
+	// }
 }
